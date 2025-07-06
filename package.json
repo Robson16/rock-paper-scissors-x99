@@ -15,13 +15,13 @@
     "http",
     "web development"
   ],
-  "homepage": "",
+  "homepage": "https://rock-paper-scissors-x99.vercel.app",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Robson16/rock-paper-scissors-x99"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/Robson16/rock-paper-scissors-x99/issues"
   },
   "devDependencies": {
     "chai": "4.5.0",

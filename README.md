@@ -1,72 +1,99 @@
 # Rock Paper Scissors x99
 
-## Project Overview
+![Rock Paper Scissors x99](./.github/screenshot.png)
 
-In this project, you will build all of the logic needed for a more intense version of
-Rock Paper Scissors (RPS). Rather than selecting just one of Rock, Paper, or Scissors - each player
-will select three moves. Each move will consist of a type (Rock, Paper, or Scissors) as well
-as a strength value. Each player will have 99 total points to use as strength between all
-three of their moves. For example, an example set of moves might be:
+---
 
-- Move 1: Rock - 30 Strength Points
-- Move 2: Rock - 60 Strength Points
-- Move 3: Paper - 9 Strength Points
+## Overview
 
-The strength for each move must be at least 1.
+**Rock Paper Scissors x99** is a strategic and enhanced version of the classic **Rock Paper Scissors** game. In this game, each player selects **three moves** and distributes a total of **99 strength points** across these moves. Each round compares both the move type and its strength value to determine the winner.
 
-After each player's moves are chosen, they will compare moves in the order they were selected. If two moves have different types (for example, Rock vs Scissors), then normal RPS rules will apply (in this case, Rock beats Scissors).
-However, if two types are the same, then the move with more strength will win. If both strength values are
-equal, then a tie is declared.
+This project was developed as part of the **[Create a Back-End App with JavaScript Skill Path](https://www.codecademy.com/learn/paths/create-a-back-end-app-with-javascript)** offered by [Codecademy](https://www.codecademy.com/).
 
-The player that wins the majority of the three rounds will be the winner of the game.
+👉 Try the live version here: [https://rock-paper-scissors-x99.vercel.app](https://rock-paper-scissors-x99.vercel.app)
 
-To demo all of this functionality, try out a final version of this project, located <a href="https://s3.amazonaws.com/codecademy-content/programs/build-apis/projects/build-apis-project-1-rock-paper-scissors-x99/project/index.html" target="_blank">here</a>.
+---
 
-## How To Begin
+## Game Rules
 
-To start, download the starting code for this project <a href="https://s3.amazonaws.com/codecademy-content/PRO/skill-paths/backend-javascript/projects/rock-paper-scissors-x99/project-1-rock-paper-scissors-x99-start.zip" target="_blank">here</a>. To do this, you may either use the git command line tool
-(if you are comfortable with it) or click the green button labeled "Clone or download" at the top right of this page and select "Download zip". After downloading the zip folder, double click it to uncompress it and access the contents of this project.
+- Each player defines **3 moves**:
+    - **Type:** `rock`, `paper`, or `scissors`
+    - **Value:** an integer strength value for each move
 
-## Implementation Details
+- The total strength points across the three moves must equal exactly **99**.
+- Each move must have at least **1 point**.
 
-All of your code should be written in the file at the following path: **js/game-logic.js**. Use the descriptions and testing suite discussed below to guide implementation of all necessary functionality.
+### How Each Round Works:
 
-To complete this project, your code will need to contain the following:
+1.  If the move types differ:
+    -   Rock beats Scissors
+    -   Scissors beats Paper
+    -   Paper beats Rock
+2.  If the move types are the same:
+    -   The move with the **higher strength value** wins.
+3.  If both moves have the same type and strength:
+    -   The round is declared a **tie**.
 
-* Twelve global variables representing each player's move types and values (3 move types and 3 move values for each player). These variable names should be in the form of `playerOneMoveOneType`, `playerOneMoveOneValue`, etc.
+The player who wins the **majority of the three rounds** wins the game.
 
-* A function called `setPlayerMoves`, which will take a string representing a player (in the form of `'Player One'` or `'Player Two'`), three move types, and three move values, and set the correct global move variables. The method signature for this function should be as follows: `setPlayerMoves(player, moveOneType, moveOneValue, moveTwoType, moveTwoValue, moveThreeType, moveThreeValue)`.
+---
 
-* A function called `getRoundWinner`, which takes a round number (`1`, `2`, or `3`), compares both player's move types and values for that round, and returns the appropriate winner (`'Player One'`, `'Player Two'`, or `'Tie'`)
+## Features
 
-* A function called `getGameWinner`, which compares both player's move
-types and values for the whole game and returns the appropriate winner (`'Player One'`, `'Player Two'`, or `'Tie'`)
+-   🔹 Set player moves manually with:
+    `setPlayerMoves(player, moveOneType, moveOneValue, moveTwoType, moveTwoValue, moveThreeType, moveThreeValue)`
 
-* Bonus: A function called `setComputerMoves`, which chooses three random moves for player two. The move type for each move should be completely random, and the move values should be random but add up to 99.
+-   🔹 Determine the winner of a specific round with:
+    `getRoundWinner(roundNumber)`
 
+-   🔹 Determine the overall game winner with:
+    `getGameWinner()`
 
-To demo your version of the game, open **index.html** in your browser (by double clicking **index.html** in a file browser or dragging it into your Internet browser). You will be writing
-JavaScript code that uses new syntax (you will learn more about this later),
-so you will need to use the most up-to-date version of Chrome to ensure your code runs correctly. If your
-version of Chrome is too old, correctly-written code may still not run as expected.
+-   🔹 Play against the computer using randomly generated valid moves with:
+    `setComputerMoves()`
 
-*Disclaimer*: If you have prior JavaScript or programming experience, you might be able to come up with an implementation that uses language features or best practices that we haven't yet covered in Build Web APIs From Scratch. The implementation details and the tests for this project require a specific implementation based upon the material covered so far: JS types, variables, functions, and scope, but not topics that will be covered in later units.
+---
 
-As the projects in the Intensive continue, the project specifications and tests will become less granular, allowing you to implement the required functionality on your own.
+## Technologies Used
 
+-   JavaScript (ES6+)
+-   Simple HTML/CSS for the interface
+-   Automated testing with:
+    -   [Mocha](https://mochajs.org/)
+    -   [Chai](https://www.chaijs.com/)
 
-## Testing
+---
 
-A testing suite has been provided for you, checking for all essential functionality and
-edge cases.
+## How to Run This Project
 
-To run these tests, first open the root project directory in your terminal. Then run `npm install` to install
-all necessary testing dependencies (you will only need to do this step once).
-Finally, run `npm run test`. You will see a list of tests that ran with information
-about whether or not each test passed. After this list, you will see more specific output
-about why each failing test failed.
+1.  Clone this repository:
+    ```bash
+    git clone https://github.com/Robson16/rock-paper-scissors-x99.git
+    cd rock-paper-scissors-x99
+    ```
+2.  Install development dependencies:
+    ```bash
+    npm install
+    ```
+3.  Run automated tests:
+    ```bash
+    npm run test
+    ```
+4.  To play the game, open the `index.html` file in your web browser. I recommend using the latest version of Google Chrome for best compatibility.
 
-As you implement functionality, run the tests to
-ensure you are creating correctly named variables and functions that return the proper values.
-The tests will additionally help you identify edge cases that you may not have anticipated
-when first writing the functions.
+---
+
+## Useful Links
+
+🔗 Live Demo: https://rock-paper-scissors-x99.vercel.app
+
+🔗 GitHub Repository: https://github.com/Robson16/rock-paper-scissors-x99
+
+📚 Related Course: Create a Back-End App with JavaScript
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+Developed by Robson16.
