@@ -1,24 +1,25 @@
 {
-  "name": "rock-paper-scissors-99",
+  "name": "rock-paper-scissors-x99",
   "version": "1.0.0",
-  "description": "",
+  "description": "A strategic and enhanced version of the classic Rock Paper Scissors game, where players distribute 99 strength points across three moves. Developed as part of Codecademy's 'Create a Back-End App with JavaScript' skill path.",
+  "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
   "author": "Robson16",
   "license": "MIT",
   "keywords": [
-    "CodeCademy",
-    "backend",
+    "Codecademy",
     "javascript",
-    "content-type",
-    "http",
-    "web development"
+    "game",
+    "rock paper scissors",
+    "strategy",
+    "client-side"
   ],
   "homepage": "https://rock-paper-scissors-x99.vercel.app",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Robson16/rock-paper-scissors-x99"
+    "url": "https://github.com/Robson16/rock-paper-scissors-x99.git"
   },
   "bugs": {
     "url": "https://github.com/Robson16/rock-paper-scissors-x99/issues"
